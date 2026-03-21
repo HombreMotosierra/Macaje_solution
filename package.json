@@ -1,0 +1,13 @@
+{
+  "name": "macaje-solutions-workspace",
+  "private": true,
+  "scripts": {
+    "play": "concurrently -k -n back,front -c blue,green \"cd Back && mvnw.cmd spring-boot:run\" \"npm --prefix Front run dev -- --host 0.0.0.0\"",
+    "dev": "concurrently -k -n back,front -c blue,green \"cd Back && mvnw.cmd spring-boot:run\" \"npm --prefix Front run dev -- --host 0.0.0.0\"",
+    "dev:back": "cd Back && mvnw.cmd spring-boot:run",
+    "dev:front": "npm --prefix Front run dev -- --host 0.0.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
